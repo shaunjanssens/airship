@@ -3,15 +3,9 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  padding: 30px;
-  background: #0094ff
-    linear-gradient(206deg, #1abdff 5%, #00acff 54%, #0094ff 100%) center center;
   font-family: "Avenir", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 16px;
   color: #ffffff;
@@ -19,46 +13,43 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.airship {
+.container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 5.625em 0 0 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 30px;
+  background-color: #1234e6;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
+.airship {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 80px;
+  height: auto;
 }
 
-.name {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1.875em;
-}
-
-.name h1 {
-  margin-bottom: 0.5em;
-  font-size: 2em;
-  font-weight: 300;
-  letter-spacing: 0.1em;
-}
-
-.name h2 {
-  font-size: 1.125em;
-  font-weight: 500;
-  letter-spacing: 0.1em;
+.logo {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
 }
 
 .contact {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  padding-top: 1.25em;
 }
 
 .contact__item {
   display: flex;
   align-items: center;
-  margin: 0 0 1em;
+  margin: 0 0 1.25em;
 }
 
 .contact__item:last-child {
@@ -72,8 +63,9 @@ body {
 }
 
 .contact__link {
-  font-size: 1em;
-  letter-spacing: 0.05em;
+  font-size: 0.875em;
+  font-weight: 700;
+  font-style: italic;
 }
 
 .contact__link a {
@@ -82,47 +74,15 @@ body {
 }
 
 @media (min-width: 768px) {
-  body {
-    padding: 40px 60px;
-  }
-
   .airship {
-    margin: 12.5em 0 0 0;
+    top: 60px;
+    left: 60px;
+    width: 90px;
   }
-
-  .content {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-
-  .name {
-    margin-bottom: 0;
-  }
-}
-
-@media (min-width: 1140px) {
-  .airship {
-    margin: auto;
-  }
-
-  .name {
-    flex-direction: row;
-  }
-
-  .name h1 {
-    margin: 0 0.5em 0 0;
-  }
-
-  .name h2 {
-    padding-top: 0.666em;
-  }
-
   .contact {
     flex-direction: row;
   }
-
   .contact__item {
-    margin: 0 1em 0 0;
+    margin: 0 1.875em 0 0;
   }
 }
